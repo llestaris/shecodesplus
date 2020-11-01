@@ -12,8 +12,6 @@ const temperatureElement = document.querySelector("#Temperature");
 const dateTimeElement = document.querySelector("#DateTime");
 const weatherDescriptionElement = document.querySelector("#WeatherDescription");
 const weatherIconElement = document.querySelector("#WeatherIcon");
-// const celsiusBtnElement = document.querySelector("#CelsiusBtn");
-// const fahrenheitBtnElement = document.querySelector("#FahrenheitBtn");
 
 function setCityName(cityName) {
   cityInputElement.value = cityName;
@@ -36,17 +34,7 @@ searchBtnElement.addEventListener("click", () => {
     return;
   }
 
-  let url = `${apiURL}?q=${cityName}&appid=${apiKey}&units=metric`;
-  console.log(url);
-  axios.get(url).then(function (response) {
-    console.log(response);
-    setCurrentWeather(
-      response.data.main.temp,
-      response.data.weather[0].icon,
-      response.data.weather[0].description
-    );
-    setCityName(response.data.name);
-  });
+  loadWeatherFor(cityName);
 });
 
 currentBtnElement.addEventListener("click", () => {
@@ -68,29 +56,19 @@ currentBtnElement.addEventListener("click", () => {
   });
 });
 
-// celsiusBtnElement.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   temperatureElement.innerHTML = "19";
-// });
+function loadWeatherFor(cityName) {
+  let url = `${apiURL}?q=${cityName}&appid=${apiKey}&units=metric`;
+  console.log(url);
+  axios.get(url).then(function (response) {
+    console.log(response);
+    setCurrentWeather(
+      response.data.main.temp,
+      response.data.weather[0].icon,
+      response.data.weather[0].description
+    );
+    setCityName(response.data.name);
+  });
+}
 
-// fahrenheitBtnElement.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   temperatureElement.innerHTML = "66";
-// });
-
-// function setDateTime() {
-//   let now = new Date();
-//   let dayName = [
-//     "Sunday",
-//     "Monday",
-//     "Tuesday",
-//     "Wednesday",
-//     "Thursday",
-//     "Friday",
-//     "Saturday",
-//   ][now.getDay()];
-//   dateTimeElement.innerHTML = `${dayName} ${now.getHours()}:${now.getMinutes()}`;
-// }
-
-// setInterval(setDateTime, 1000);
-// setDateTime();
+setCityName("Cowes, UK");
+loadWeatherFor("Cowes, UK");

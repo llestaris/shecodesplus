@@ -1,11 +1,31 @@
 div.container-fluid {
-  margin-top: 50px;
   width: 700px;
+}
+
+/* Logo */
+
+#LogoContainer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+/* Colour */
+#AppContainer {
+  padding: 20px;
+  /* https://cssgradient.io/ */
+  background: rgb(96, 176, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(96, 176, 244, 1) 0%,
+    rgba(210, 232, 236, 0.9682247899159664) 100%
+  );
 }
 
 /* Search bar */
 
-.button-container {
+#ButtonsContainer {
   text-align: right;
 }
 
@@ -14,11 +34,6 @@ div.container-fluid {
 #WeatherCity {
   margin-top: 20px;
   display: none;
-}
-
-.clear-sky-day {
-  background-color: #d9edfd;
-  border: 3px solid #43a4f5;
 }
 
 #WeatherCity .col-8 {
@@ -50,4 +65,10 @@ div.container-fluid {
   font-weight: normal;
   margin: 0;
   text-transform: capitalize;
+}
+
+/* Message */
+
+#MessageContainer {
+  margin-top: 20px;
 }
