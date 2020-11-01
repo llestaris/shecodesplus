@@ -1,0 +1,53 @@
+div.container-fluid {
+  margin-top: 50px;
+  width: 700px;
+}
+
+/* Search bar */
+
+.button-container {
+  text-align: right;
+}
+
+/* Curent weather */
+
+#WeatherCity {
+  margin-top: 20px;
+  display: none;
+}
+
+.clear-sky-day {
+  background-color: #d9edfd;
+  border: 3px solid #43a4f5;
+}
+
+#WeatherCity .col-8 {
+  padding: 20px;
+  padding-left: 30px;
+}
+
+#WeatherCity .col-4 {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 75px;
+}
+
+#WeatherCity h1,
+#WeatherCity h3#DateTime {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+#WeatherCity h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+#WeatherCity h3 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+  text-transform: capitalize;
+}
