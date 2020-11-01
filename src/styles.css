@@ -21,6 +21,8 @@ div.container-fluid {
     rgba(96, 176, 244, 1) 0%,
     rgba(210, 232, 236, 0.9682247899159664) 100%
   );
+  border: 0 solid rgba(96, 176, 244, 1);
+  border-radius: 10px;
 }
 
 /* Search bar */
