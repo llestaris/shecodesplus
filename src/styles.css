@@ -12,6 +12,7 @@ div.container-fluid {
 }
 
 /* Colour */
+
 #AppContainer {
   padding: 20px;
   /* https://cssgradient.io/ */
@@ -62,11 +63,22 @@ div.container-fluid {
   margin: 10px 0;
 }
 
-#WeatherCity h3 {
+#WeatherCity h3#WeatherDescription {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
   text-transform: capitalize;
+}
+
+#WeatherCity h3#WeatherRealFeel,
+#WeatherCity h3#Wind {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#WeatherCity a#SwitchTemperatureUnit {
+  font-size: 0.6em;
 }
 
 /* Message */

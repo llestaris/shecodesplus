@@ -44,9 +44,22 @@
           <div id="WeatherCity">
             <div class="row">
               <div class="col-8">
-                <h1>Weather in <span id="CityName"></span></h1>
-                <h2><span id="Temperature"></span> °C</h2>
+                <h1>
+                  Weather in <span id="CityName"></span>
+                  (at time <span id="CityLocalTime"></span>)
+                </h1>
+                <h2>
+                  <span id="Temperature"></span>
+                  <span id="TemperatureUnit">°C</span>
+                  <a id="SwitchTemperatureUnit" href="#">(use °F)</a>
+                </h2>
                 <h3 id="WeatherDescription"></h3>
+                <h3 id="WeatherRealFeel">
+                  Real feel
+                  <span id="RealFeelTemperature"></span>
+                  <span id="RealFeelTemperatureUnit">°C</span>
+                </h3>
+                <h3 id="Wind"></h3>
               </div>
               <div class="col-4" id="WeatherIcon"></div>
             </div>
